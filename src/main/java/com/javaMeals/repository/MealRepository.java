@@ -4,5 +4,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.javaMeals.model.Meal;
 
-public interface MealRepository extends MongoRepository<Meal, Long> {
+public interface MealRepository extends MongoRepository<Meal, String> {
 }
