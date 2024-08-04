@@ -7,13 +7,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Meal {
     @Id
     private String id;
+
     private String name;
     private String[] ingredients;
 
     public Meal() {}
 
-    public Meal(String id, String name, String[] ingredients) {
-        this.id = id;
+    public Meal(String name, String[] ingredients) {
         this.name = name;
         this.ingredients = ingredients;
     }
@@ -22,7 +22,6 @@ public class Meal {
     public String getName() { return name; }
     public String[] getIngredients() { return ingredients; }
 
-    public void setId(String id) { this.id = id; }
     public void setName(String name) { this.name = name; }
     public void setIngredients(String[] ingredients) { this.ingredients = ingredients; }
 }

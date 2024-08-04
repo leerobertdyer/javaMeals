@@ -37,7 +37,7 @@ public class MealController {
 
     // Get a single meal
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<Meal> getSingleMeal(@PathVariable String id) {
         Optional<Meal> optionalMeal = mealRepository.findById(id);
 
@@ -87,6 +87,6 @@ public class MealController {
 
         mealRepository.delete(meal);
 
-        return ResponseEntity.ok("meal deleted?");
+        return ResponseEntity.ok("meal deleted!");
     }
 }
